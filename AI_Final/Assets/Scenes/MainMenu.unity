@@ -4920,7 +4920,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 859290122}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

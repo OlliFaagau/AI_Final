@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody2D body;
+    Animator animator;
+    Vector2 movement;
+
+    public float runSpeed = 5.0f;
+
     void Start()
     {
-        
+        body = GetComponent<Rigidbody2D>();
+       animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+    }
+
+    private void FixedUpdate()
+    {
+        body.velocity = new Vector2(movement.x * runSpeed, movement.y * runSpeed);
     }
 }

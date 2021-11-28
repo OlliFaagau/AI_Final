@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Home
+  - Sign
   layers:
   - Default
   - TransparentFX
@@ -52,4 +54,7 @@ TagManager:
     locked: 0
   - name: Jellies
     uniqueID: 3959437851
+    locked: 0
+  - name: UI
+    uniqueID: 1052611587
     locked: 0

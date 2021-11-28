@@ -19,6 +19,11 @@ public class Scenes : MonoBehaviour
     {
         SceneManager.LoadScene("About");
     }
+
+    public void Play()
+    {
+        SceneManager.LoadScene("Play");
+    }
     
     public void Restart()
     {
