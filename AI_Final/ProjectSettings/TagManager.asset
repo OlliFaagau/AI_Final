@@ -38,30 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 3924557007
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Sky
-    uniqueID: 373511715
-    locked: 0
-  - name: Clouds
-    uniqueID: 1789614315
+  - name: Objects
+    uniqueID: 2474441111
     locked: 0
   - name: Room
-    uniqueID: 3989647739
+    uniqueID: 2999714271
     locked: 0
-  - name: Shadows
-    uniqueID: 581230739
-    locked: 0
-  - name: Items
-    uniqueID: 1141195459
-    locked: 0
-  - name: Monsters
-    uniqueID: 810626655
-    locked: 0
-  - name: Sunshine
-    uniqueID: 1950699639
-    locked: 0
-  - name: UI
-    uniqueID: 3372443557
+  - name: Jellies
+    uniqueID: 3959437851
     locked: 0
