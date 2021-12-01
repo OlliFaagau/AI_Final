@@ -18,6 +18,12 @@ public class Interactions : MonoBehaviour
         {
             sign.SetActive(true);
         }
+
+        if(col.gameObject.tag == "Coin")
+        {
+            //increase static coin counter
+            Destroy(col.gameObject);
+        }
     }
     void OnCollisionExit2D()
     {

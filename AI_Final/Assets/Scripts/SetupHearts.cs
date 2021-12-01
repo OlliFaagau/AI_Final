@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SetupHearts : MonoBehaviour
 {
-    public int total;
+    //public int total;
 
     public void SubmitSetup()
     {
-        total = HealthBar.instance.SetupHearts(total);
+        //total = HealthBar.instance.SetupHearts(total);
     }
 
 }
