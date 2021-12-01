@@ -8,7 +8,7 @@ public class SetupHearts : MonoBehaviour
 
     public void SubmitSetup()
     {
-        HealthBar.instance.SetupHearts(total);
+        total = HealthBar.instance.SetupHearts(total);
     }
 
 }
