@@ -6,47 +6,34 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
 
-    public int health;
-    public int numOfHearts;
-    
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public int maxHealth;
+    public int curHealth;
 
-    // Start is called before the first frame update
+    public float valueIn;
+
     void Start()
     {
-        
+        curHealth = maxHealth;
     }
 
-    // Update is called once per frame
+    public void SubmitSetup()
+    {
+        HealthBar.instance.SetupHearts(maxHealth);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            HealthBar.instance.RemoveHearts(valueIn);
+        }
+    }
+
     void Update()
     {
-        
-        if (health > numOfHearts)
-            {
-                health = numOfHearts;
-            }
-        
-        for (int i = 0; i < hearts.Length ; i++)
+        if(curHealth == 0)
         {
-            if(i < health)
-            {
-                hearts[i].sprite = fullHeart;
-            }
-            else
-            {
-                hearts[i].sprite = emptyHeart;
-            }
-
-            if(i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
+            Application.Quit();
         }
     }
 }
