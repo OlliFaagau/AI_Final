@@ -7,6 +7,9 @@ TagManager:
   - Home
   - Sign
   - Coin
+  - Cave
+  - CaveExit
+  - Burger
   layers:
   - Default
   - TransparentFX
