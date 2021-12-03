@@ -5,35 +5,34 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-
-    public int maxHealth;
     public int curHealth;
+    public int maxHealth = 100;
 
-    public float valueIn;
+    public HealthBar healthBar;
 
+    // Start is called before the first frame update
     void Start()
     {
         curHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
-    public void SubmitSetup()
+    void OnCollisionEnter(Collision collision)
     {
-        HealthBar.instance.SetupHearts(maxHealth);
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
-            HealthBar.instance.RemoveHearts(valueIn);
+            DamagePlayer(10);
         }
     }
 
+    public void DamagePlayer(int damage)
+    {
+        curHealth -= damage;
+        healthBar.SetHealth(curHealth);
+    }
+    
     void Update()
     {
-        if(curHealth == 0)
-        {
-            Application.Quit();
-        }
+        //if statement for when player dies gameOver screen with Restart & mainMenu
     }
 }
