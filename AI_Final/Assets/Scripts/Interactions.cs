@@ -11,7 +11,7 @@ public class Interactions : MonoBehaviour
 
     void Start()
     {
-        if(Variables.coins >= 9)
+        if(Player.coins >= 9)
         {
             GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
             foreach (GameObject coin in coins)
@@ -19,6 +19,11 @@ public class Interactions : MonoBehaviour
                 GameObject.Destroy(coin);
             }
         }
+    }
+
+    void Update()
+    {
+        coinText.text = Player.coins.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -35,8 +40,7 @@ public class Interactions : MonoBehaviour
 
         if(col.gameObject.tag == "Coin")
         {
-            Variables.coins++;
-            coinText.text = Variables.coins.ToString();
+            Player.coins++;
             Destroy(col.gameObject);
         }
 
@@ -52,8 +56,8 @@ public class Interactions : MonoBehaviour
 
         if(col.gameObject.tag == "Burger")
         {
-            //increment burger counter
-            //add item to inventory
+            Player.burgers++;
+            //add burger to inventory
             Destroy(col.gameObject);
         }
     }

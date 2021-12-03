@@ -8,7 +8,6 @@ public class EnemyAI : MonoBehaviour
     public float speed;
     public Transform[] moveSpots;
     int currentWP = 0;
-    int counter = 0;
     float accuracy = 0.2f;
 
     void Update()
