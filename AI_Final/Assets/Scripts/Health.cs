@@ -10,14 +10,13 @@ public class Health : MonoBehaviour
 
     public HealthBar healthBar;
 
-    // Start is called before the first frame update
     void Start()
     {
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {

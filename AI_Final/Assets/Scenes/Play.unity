@@ -759,7 +759,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55.990723, y: 71.25}
+  m_AnchoredPosition: {x: -55.99066, y: 71.25}
   m_SizeDelta: {x: -1486.44, y: -792.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103952250
@@ -14409,10 +14409,9 @@ GameObject:
   - component: {fileID: 725746386}
   - component: {fileID: 725746385}
   - component: {fileID: 725746384}
-  - component: {fileID: 725746388}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14517,22 +14516,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &725746388
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725746383}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.046129286, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.7965453
 --- !u!1 &729796632
 GameObject:
   m_ObjectHideFlags: 0
@@ -23569,7 +23552,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1346158175
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24451,9 +24434,10 @@ GameObject:
   - component: {fileID: 1552646030}
   - component: {fileID: 1552646029}
   - component: {fileID: 1552646032}
+  - component: {fileID: 1552646033}
   m_Layer: 6
   m_Name: JellyGFX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24558,6 +24542,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 725746385}
+--- !u!61 &1552646033
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552646028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.25, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1609366483
 GameObject:
   m_ObjectHideFlags: 0
@@ -25365,7 +25375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55.990723, y: 71.25}
+  m_AnchoredPosition: {x: -55.99066, y: 71.25}
   m_SizeDelta: {x: -1486.44, y: -792.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743554216
@@ -38048,7 +38058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55.990723, y: 71.25}
+  m_AnchoredPosition: {x: -55.99066, y: 71.25}
   m_SizeDelta: {x: -1486.44, y: -792.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952389024
@@ -39203,9 +39213,10 @@ GameObject:
   - component: {fileID: 2147405575}
   - component: {fileID: 2147405577}
   - component: {fileID: 2147405576}
+  - component: {fileID: 2147405578}
   m_Layer: 6
   m_Name: JellyGFX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39297,6 +39308,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2147405578
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147405574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.25, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 1}
+  m_EdgeRadius: 0
 --- !u!212 &2187661162874455747
 SpriteRenderer:
   m_ObjectHideFlags: 0
