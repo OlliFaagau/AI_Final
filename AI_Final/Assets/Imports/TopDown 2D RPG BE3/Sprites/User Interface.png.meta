@@ -143,7 +143,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Panel White
+      name: User Interface_0
       rect:
         serializedVersion: 2
         x: 0
@@ -151,20 +151,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 442b79d9ce5520db0800000000000000
-      internalID: -4827201375843143100
+      spriteID: 1f59482aaa8363944898719b9a81c300
+      internalID: 1963626570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Panel Black
+      name: User Interface_1
       rect:
         serializedVersion: 2
         x: 33
@@ -172,20 +172,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d19c326f7772ba30800000000000000
-      internalID: 4229574389047005653
+      spriteID: c4f5db9303013724188256d3aaafd9c5
+      internalID: 1335611507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button Accept
+      name: User Interface_2
       rect:
         serializedVersion: 2
         x: 66
@@ -193,20 +193,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e52863afc1c45b4a0800000000000000
-      internalID: -6578267993364069794
+      spriteID: 782b97aae9d33b94e878ab17d1613933
+      internalID: -514680482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Talk Cursor
+      name: User Interface_3
       rect:
         serializedVersion: 2
         x: 99
@@ -214,20 +214,20 @@ TextureImporter:
         width: 10
         height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a177391f7884f54c0800000000000000
-      internalID: -4296635770777405670
+      spriteID: 52b88912f072f1748b35320c1f428085
+      internalID: -779687513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button Up
+      name: User Interface_4
       rect:
         serializedVersion: 2
         x: 0
@@ -235,20 +235,20 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1808d6e7f0b08a070800000000000000
-      internalID: 8117750489508839553
+      spriteID: 3beac21894c01c24994c76abf167d1c0
+      internalID: -948423988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button Down
+      name: User Interface_5
       rect:
         serializedVersion: 2
         x: 25
@@ -256,20 +256,20 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aef57f1705b190ae0800000000000000
-      internalID: -1582703761720647702
+      spriteID: a707cc1b50d6e1945a4e0f4a574e925d
+      internalID: 1885211235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button Left
+      name: User Interface_6
       rect:
         serializedVersion: 2
         x: 50
@@ -277,20 +277,20 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38269f7e13a540850800000000000000
-      internalID: 6342293345636278915
+      spriteID: 152259cb071b6c6468d5e640ec1d5a19
+      internalID: -1075698035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button Right
+      name: User Interface_7
       rect:
         serializedVersion: 2
         x: 75
@@ -298,20 +298,20 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 781f550e6f6c5b780800000000000000
-      internalID: -8667803144176668281
+      spriteID: e8de005d12784b243ac0ff567e05f248
+      internalID: -1526285937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button Back
+      name: User Interface_8
       rect:
         serializedVersion: 2
         x: 100
@@ -319,14 +319,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67f3651f4d7f77f20800000000000000
-      internalID: 3420474935965269878
+      spriteID: 93e95985f9a52c04997f0f95088974b9
+      internalID: 875895343
       vertices: []
       indices: 
       edges: []
@@ -342,15 +342,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Button Accept: -6578267993364069794
-      Talk Cursor: -4296635770777405670
-      Panel White: -4827201375843143100
-      Button Left: 6342293345636278915
-      Button Down: -1582703761720647702
-      Panel Black: 4229574389047005653
-      Button Back: 3420474935965269878
-      Button Up: 8117750489508839553
-      Button Right: -8667803144176668281
+      User Interface_5: 1885211235
+      User Interface_3: -779687513
+      User Interface_1: 1335611507
+      User Interface_7: -1526285937
+      User Interface_8: 875895343
+      User Interface_4: -948423988
+      User Interface_0: 1963626570
+      User Interface_2: -514680482
+      User Interface_6: -1075698035
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

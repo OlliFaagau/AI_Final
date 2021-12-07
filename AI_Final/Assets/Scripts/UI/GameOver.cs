@@ -16,6 +16,8 @@ public class GameOver : MonoBehaviour
 
     public CharacterController moveScript;
 
+    public GameObject healthUI;
+
     AudioSource audioFile;
 
     void Start()
@@ -42,6 +44,7 @@ public class GameOver : MonoBehaviour
 
     public void Winner()
     {
+        healthUI.SetActive(false);
         aiEnemy.SetActive(false);
         moveScript.Movementenabled = false;
         winnerPanel.SetActive(true);
