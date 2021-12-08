@@ -46,12 +46,12 @@ public class Interactions : MonoBehaviour
 
         if(col.gameObject.tag == "Cave")
         {
-            transform.position = new Vector3(-28, 0, 0);
+            StartCoroutine(TimeDelay());
         }
 
         if (col.gameObject.tag == "CaveExit")
         {
-            transform.position = new Vector3(-6.5f, -10, 0);
+            StartCoroutine(timeDelay());
         }
 
         if(col.gameObject.tag == "Burger")
@@ -70,5 +70,19 @@ public class Interactions : MonoBehaviour
     public void AnswerNo()
     {
         homeMenu.SetActive(false);
+    }
+
+    IEnumerator TimeDelay()
+    {
+        yield return new WaitForSeconds(1);
+        transform.position = new Vector3(-28, 0, 0);
+
+    }
+
+    IEnumerator timeDelay()
+    {
+        yield return new WaitForSeconds(1);
+        transform.position = new Vector3(-6.5f, -10, 0);
+
     }
 }
