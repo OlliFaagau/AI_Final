@@ -7,7 +7,10 @@ public class WorldQuest : MonoBehaviour
     public QuestGiver giverScript;
     public SpriteRenderer emote;
     public Sprite updatedEmote;
+
     public YummyQuest yummy;
+    
+    public Item item;
 
     void Update()
     {
@@ -23,14 +26,19 @@ public class WorldQuest : MonoBehaviour
             {
                 giverScript.quest.isActive = false;
                 giverScript.quest.isComplete = true;
-                
+
                 Player.coins = 0;
 
+                GetItem();
                 yummy.diamond = true;
-                //Add Item to Inventory
-                
                 emote.sprite = updatedEmote;
             }
         }
+    }
+
+    void GetItem()
+    {
+        Inventory.instance.Add(item);
+        Debug.Log("Recieved " + item.name + " from Mr. World");
     }
 }

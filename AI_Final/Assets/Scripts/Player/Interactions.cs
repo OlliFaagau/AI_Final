@@ -8,9 +8,14 @@ public class Interactions : MonoBehaviour
     public GameObject homeMenu;
     public GameObject sign;
     public Text coinText;
+    public GameObject caveFade, fadeIn;
+
+    public CharacterController playerScript;
 
     void Start()
     {
+        fadeIn.SetActive(true);
+
         if(Player.coins >= 9)
         {
             GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
@@ -46,19 +51,33 @@ public class Interactions : MonoBehaviour
 
         if(col.gameObject.tag == "Cave")
         {
+            playerScript.Movementenabled = false;
+
+            if (caveFade.activeSelf)
+                caveFade.GetComponent<Animation>().Play("Fade");
+            else
+                caveFade.SetActive(true);
+            
+            transform.position = new Vector3(-28, 0, 0);
+
             StartCoroutine(TimeDelay());
         }
 
         if (col.gameObject.tag == "CaveExit")
         {
+            
+            playerScript.Movementenabled = false;
+
+            fadeIn.GetComponent<Animation>().Play("Fade");
+            
+            transform.position = new Vector3(-6.5f, -10, 0);
+
             StartCoroutine(timeDelay());
         }
 
         if(col.gameObject.tag == "Burger")
         {
             Player.burgers++;
-            //add burger to inventory
-            Destroy(col.gameObject);
         }
     }
     void OnCollisionExit2D()
@@ -74,15 +93,15 @@ public class Interactions : MonoBehaviour
 
     IEnumerator TimeDelay()
     {
-        yield return new WaitForSeconds(1);
-        transform.position = new Vector3(-28, 0, 0);
+        yield return new WaitForSeconds(2);
 
+        playerScript.Movementenabled = true;
     }
 
     IEnumerator timeDelay()
     {
-        yield return new WaitForSeconds(1);
-        transform.position = new Vector3(-6.5f, -10, 0);
+        yield return new WaitForSeconds(2);
 
+        playerScript.Movementenabled = true;
     }
 }

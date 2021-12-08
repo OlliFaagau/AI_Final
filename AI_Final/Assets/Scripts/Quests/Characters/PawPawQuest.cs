@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PawPawQuest : MonoBehaviour
 {
     public QuestGiver giverScript;
+    public Inventory inventoryScript;
 
     public GameObject burgerBunch;
 
@@ -35,7 +36,7 @@ public class PawPawQuest : MonoBehaviour
 
             if (burgs.Length == 0)
                 Instantiate(burgerBunch);
-            
+
             timer.SetActive(true);
             attempt = true;
         }
@@ -43,22 +44,25 @@ public class PawPawQuest : MonoBehaviour
         if (currentTime <= 0)
         {
             timer.SetActive(false);
+
             Player.burgers = 0;
-            //Remove all burgers from inventory
-            
+            inventoryScript.RemoveAllItems();
+
             giverScript.quest.isActive = false;
             currentTime = 60;
             attempt = false;
+
             GameObject[] burgers = GameObject.FindGameObjectsWithTag("Burger");
+
             foreach (GameObject burg in burgers)
                 GameObject.Destroy(burg);
         }
-        
+
         if (attempt == true)
         {
             currentTime -= 1 * Time.deltaTime;
             timerText.text = currentTime.ToString("0");
-        }   
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -69,15 +73,21 @@ public class PawPawQuest : MonoBehaviour
             {
                 giverScript.quest.isActive = false;
                 giverScript.quest.isComplete = true;
+
                 Player.burgers = 0;
-                //Remove all burgers from inventory
-                //Add New Item to Inventory
+                inventoryScript.RemoveAllItems();
+
                 timer.SetActive(false);
                 attempt = false;
-                GameObject [] burgers = GameObject.FindGameObjectsWithTag("Burger");
+
+                GameObject[] burgers = GameObject.FindGameObjectsWithTag("Burger");
+
                 foreach (GameObject burg in burgers)
                     GameObject.Destroy(burg);
+
                 Player.coins++;
+                Debug.Log("Recieved a coin from PawPaw");
+
                 emote.sprite = updatedEmote;
             }
         }

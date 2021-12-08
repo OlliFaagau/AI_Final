@@ -4,21 +4,54 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject inventoryPanel;
-    private bool onOff = false;
+    public static Inventory instance;
+    public InventoryUI inventoryScript;
 
-    void Update()
+    #region Singleton
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (instance != null)
         {
-            OpenClose();
+            Debug.LogWarning("More than one instance of Inventory found!");
+            return;
         }
+
+        instance = this;
+    }
+    #endregion
+
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback;
+
+    public int space = 8;
+
+    public List<Item> items = new List<Item>();
+
+    public void Add (Item item)
+    {
+        if(items.Count >= space)
+        {
+            Debug.Log("Not enough room in inventory.");
+            return;
+        }
+        
+        items.Add(item);
+
+        if(onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+    }
+    
+    public void Remove(Item item)
+    {
+        items.Remove(item);
+
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
     }
 
-    void OpenClose()
+    public void RemoveAllItems()
     {
-        onOff = !onOff;
-
-        inventoryPanel.SetActive(onOff);
+        items.Clear();
+        inventoryScript.ClearAllSlots();
     }
 }

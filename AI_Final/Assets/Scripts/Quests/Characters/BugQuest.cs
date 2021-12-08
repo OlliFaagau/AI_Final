@@ -5,6 +5,8 @@ using UnityEngine;
 public class BugQuest : MonoBehaviour
 {
     public QuestGiver giverScript;
+    public Inventory inventoryScript;
+
     public SpriteRenderer emote;
     public Sprite updatedEmote;
 
@@ -26,6 +28,7 @@ public class BugQuest : MonoBehaviour
             {
                 giverScript.quest.isActive = false;
                 giverScript.quest.isComplete = true;
+                inventoryScript.RemoveAllItems();
                 emote.sprite = updatedEmote;
             }
         }

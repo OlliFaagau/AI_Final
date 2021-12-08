@@ -5,12 +5,16 @@ using UnityEngine;
 public class GreenyQuest : MonoBehaviour
 {
     public QuestGiver giverScript;
+    public Inventory inventoryScript;
+
     public SpriteRenderer emote;
     public Sprite updatedEmote;
 
     public BugQuest bug;
 
     public bool skull = false;
+
+    public Item item;
 
     void Update()
     {
@@ -27,10 +31,18 @@ public class GreenyQuest : MonoBehaviour
                 giverScript.quest.isActive = false;
                 giverScript.quest.isComplete = true;
 
-                emote.sprite = updatedEmote;
+                inventoryScript.RemoveAllItems();
 
+                GetItem();
                 bug.book = true;
+                emote.sprite = updatedEmote;
             }
         }
+    }
+
+    void GetItem()
+    {
+        Inventory.instance.Add(item);
+        Debug.Log("Recieved " + item.name + " from Greeny");
     }
 }

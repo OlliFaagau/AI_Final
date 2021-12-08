@@ -5,12 +5,16 @@ using UnityEngine;
 public class YummyQuest : MonoBehaviour
 {
     public QuestGiver giverScript;
+    public Inventory inventoryScript;
+
     public SpriteRenderer emote;
     public Sprite updatedEmote;
 
     public ChompQuest chomp;
 
     public bool diamond = false;
+
+    public Item item;
 
     void Update()
     {
@@ -27,10 +31,18 @@ public class YummyQuest : MonoBehaviour
                 giverScript.quest.isActive = false;
                 giverScript.quest.isComplete = true;
 
-                emote.sprite = updatedEmote;
+                inventoryScript.RemoveAllItems();
 
-                chomp.sushi = true;
+                GetItem();
+                chomp.pepper = true;
+                emote.sprite = updatedEmote;
             }
         }
+    }
+
+    void GetItem()
+    {
+        Inventory.instance.Add(item);
+        Debug.Log("Recieved " + item.name + " from Yummy");
     }
 }

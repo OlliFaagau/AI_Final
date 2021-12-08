@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour
 
     void Update()
     {
-        if(healthScript.curHealth == 0)
+        if(healthScript.curHealth <= 0)
             GameOverNow();
 
         if (GAMEOVER == true)

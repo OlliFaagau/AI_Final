@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7294489829346320017}
   - component: {fileID: 7294489829346320016}
   - component: {fileID: 7294489829346320023}
+  - component: {fileID: 8465046257220637532}
   m_Layer: 0
   m_Name: Chzburger (4)
   m_TagString: Burger
@@ -111,6 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &8465046257220637532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294489829346320022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121ad8c71010772468ad83e2d2f07c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: dd41958fe2740db448f5ff7addda2fad, type: 2}
 --- !u!1 &7294489829383197058
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +172,7 @@ GameObject:
   - component: {fileID: 7294489829925404531}
   - component: {fileID: 7294489829925404530}
   - component: {fileID: 7294489829925404529}
+  - component: {fileID: 4400484334018785095}
   m_Layer: 0
   m_Name: Chzburger (3)
   m_TagString: Burger
@@ -258,6 +273,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &4400484334018785095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294489829925404528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121ad8c71010772468ad83e2d2f07c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: dd41958fe2740db448f5ff7addda2fad, type: 2}
 --- !u!1 &7294489830567959333
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +297,7 @@ GameObject:
   - component: {fileID: 7294489830567959328}
   - component: {fileID: 7294489830567959335}
   - component: {fileID: 7294489830567959334}
+  - component: {fileID: 4663227997635187812}
   m_Layer: 0
   m_Name: Chzburger
   m_TagString: Burger
@@ -369,6 +398,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &4663227997635187812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294489830567959333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121ad8c71010772468ad83e2d2f07c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: dd41958fe2740db448f5ff7addda2fad, type: 2}
 --- !u!1 &7294489830828907607
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +422,7 @@ GameObject:
   - component: {fileID: 7294489830828907602}
   - component: {fileID: 7294489830828907601}
   - component: {fileID: 7294489830828907600}
+  - component: {fileID: 7349322384840831402}
   m_Layer: 0
   m_Name: Chzburger (2)
   m_TagString: Burger
@@ -480,6 +523,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &7349322384840831402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294489830828907607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121ad8c71010772468ad83e2d2f07c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: dd41958fe2740db448f5ff7addda2fad, type: 2}
 --- !u!1 &7294489830977523860
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +547,7 @@ GameObject:
   - component: {fileID: 7294489830977523863}
   - component: {fileID: 7294489830977523862}
   - component: {fileID: 7294489830977523861}
+  - component: {fileID: 7084987651225815323}
   m_Layer: 0
   m_Name: Chzburger (1)
   m_TagString: Burger
@@ -591,3 +648,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &7084987651225815323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294489830977523860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121ad8c71010772468ad83e2d2f07c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: dd41958fe2740db448f5ff7addda2fad, type: 2}

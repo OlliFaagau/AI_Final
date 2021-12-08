@@ -5,12 +5,16 @@ using UnityEngine;
 public class ChompQuest : MonoBehaviour
 {
     public QuestGiver giverScript;
+    public Inventory inventoryScript;
+
     public SpriteRenderer emote;
     public Sprite updatedEmote;
 
     public GreenyQuest greeny;
 
-    public bool sushi = false;
+    public bool pepper = false;
+
+    public Item item;
 
     void Update()
     {
@@ -22,15 +26,23 @@ public class ChompQuest : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (sushi == true)
+            if (pepper == true)
             {
                 giverScript.quest.isActive = false;
                 giverScript.quest.isComplete = true;
 
-                emote.sprite = updatedEmote;
+                inventoryScript.RemoveAllItems();
 
+                GetItem();
                 greeny.skull = true;
+                emote.sprite = updatedEmote;
             }
         }
+    }
+
+    void GetItem()
+    {
+        Inventory.instance.Add(item);
+        Debug.Log("Recieved " + item.name + " from Chomp");
     }
 }
