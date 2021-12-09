@@ -16,7 +16,7 @@ public class GreenyQuest : MonoBehaviour
 
     public Item item;
 
-    void Update()
+    void FixedUpdate()
     {
         if (giverScript.quest.isActive == true)
             Player.q5 = giverScript.quest;

@@ -14,7 +14,7 @@ public class BugQuest : MonoBehaviour
 
     public GameOver gameOverScript;
 
-    void Update()
+    void FixedUpdate()
     {
         if (giverScript.quest.isActive == true)
             Player.q6 = giverScript.quest;

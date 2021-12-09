@@ -16,7 +16,7 @@ public class ChompQuest : MonoBehaviour
 
     public Item item;
 
-    void Update()
+    void FixedUpdate()
     {
         if (giverScript.quest.isActive == true)
             Player.q4 = giverScript.quest;

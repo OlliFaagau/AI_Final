@@ -16,7 +16,7 @@ public class YummyQuest : MonoBehaviour
 
     public Item item;
 
-    void Update()
+    void FixedUpdate()
     {
         if (giverScript.quest.isActive == true)
             Player.q3 = giverScript.quest;

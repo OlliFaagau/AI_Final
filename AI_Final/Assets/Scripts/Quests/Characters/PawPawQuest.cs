@@ -25,7 +25,7 @@ public class PawPawQuest : MonoBehaviour
         currentTime = startingTime;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (giverScript.quest.isActive == true)
         {

@@ -12,7 +12,7 @@ public class WorldQuest : MonoBehaviour
     
     public Item item;
 
-    void Update()
+    void FixedUpdate()
     {
         if (giverScript.quest.isActive == true)
             Player.q1 = giverScript.quest;

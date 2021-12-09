@@ -26,27 +26,7 @@ public class QuestGiver : MonoBehaviour
             imageHolder.sprite = quest.beastie;
             nameSpace.text = quest.beastieName;
 
-            if (quest.isActive == false && quest.isComplete == false)
-            {
-                dialogueText.text = quest.response1;
-                acceptButton.SetActive(true);
-            }
-            else if (quest.isActive == true)
-            {
-                dialogueText.text = quest.response2;
-            }
-            else if (quest.isActive == false && quest.isComplete == true && itemAquired == false)
-            {
-                dialogueText.text = quest.response3;
-                itemAquired = true;
-
-                if (gameObject.name == "Beastie6")
-                    acceptButton.SetActive(true);
-            }
-            else if (itemAquired == true)
-            {
-                FinalDialogue();
-            }
+            StartCoroutine(WaitASec());
         }
     }
 
@@ -93,5 +73,32 @@ public class QuestGiver : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         gameOverScript.GAMEOVER = true;
+    }
+
+    IEnumerator WaitASec()
+    {
+        yield return new WaitForSeconds(.3f);
+
+        if (quest.isActive == false && quest.isComplete == false)
+        {
+            dialogueText.text = quest.response1;
+            acceptButton.SetActive(true);
+        }
+        if (quest.isActive == true)
+        {
+            dialogueText.text = quest.response2;
+        }
+        if (itemAquired == true)
+        {
+            FinalDialogue();
+        }
+        if (quest.isActive == false && quest.isComplete == true && itemAquired == false)
+        {
+            dialogueText.text = quest.response3;
+            itemAquired = true;
+
+            if (gameObject.name == "Beastie6")
+                acceptButton.SetActive(true);
+        }
     }
 }
