@@ -8,8 +8,4 @@ Olli Faagau
 
 GDD:
 
-shorturl.at/oJS15
-
-TRELLO:
-
-shorturl.at/mtEJP
+shorturl.at/ckuyC
